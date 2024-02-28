@@ -1,0 +1,16 @@
+.main {
+  margin-top: 30px;
+  margin-left: 260px;
+  width: 80%;
+
+  @media (max-width: 1200px) {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+.video__main {
+  margin-top: 30px;
+  width: 100%;
+}

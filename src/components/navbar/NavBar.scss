@@ -1,0 +1,68 @@
+.navbar {
+  position: fixed;
+  top: 60px;
+  left: 240px;
+
+  padding: 20px 0 8px;
+  background: white;
+
+  width: 83%;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    left: 0;
+  }
+
+  @media (max-width: 600px) {
+    top: 50px;
+  }
+
+  &__slider {
+    width: 100%;
+    overflow: hidden;
+
+    &_content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+
+      &_title {
+        flex-shrink: 0;
+        font-weight: 500;
+        font-size: 14px;
+
+        border-radius: 10px;
+        padding: 8px 12px;
+
+        background: #0000000d;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #0000000d;
+    }
+  }
+}

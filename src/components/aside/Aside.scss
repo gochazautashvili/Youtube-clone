@@ -1,0 +1,128 @@
+.aside {
+  width: 30%;
+  max-width: 240px;
+  height: 92lvh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  position: fixed;
+  top: 75px;
+  left: 0;
+  background: white;
+
+  @media (max-width: 1200px) {
+    background: rgb(220, 219, 219);
+    z-index: 999;
+    top: 0;
+    height: 100vh;
+  }
+
+  .header__left_burgerMenu {
+    display: none;
+    padding: 10px;
+
+    @media (max-width: 1200px) {
+      display: flex;
+    }
+  }
+
+  &.menu {
+    max-width: 80px;
+  }
+
+  &:hover {
+    scrollbar-color: grey transparent;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    padding: 12px;
+    border-bottom: 1px solid #bcbcbc92;
+
+    &.menu {
+      padding: 0;
+      border-bottom: none;
+    }
+
+    &.footer {
+      gap: 20px;
+      padding: 25px;
+      border-bottom: none;
+
+      a {
+        color: grey;
+      }
+
+      p {
+        font-size: 12px;
+        color: grey;
+      }
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    &_box {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      padding: 0 12px;
+      height: 40px;
+      border-radius: 10px;
+
+      &.menu {
+        flex-direction: column;
+        gap: 0;
+
+        height: auto;
+        font-size: 12px;
+        padding: 20px 0;
+      }
+
+      &.you {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      img {
+        border-radius: 50%;
+      }
+
+      &:hover {
+        background: #bcbcbc41;
+      }
+
+      &:active {
+        background: #bcbcbcac;
+      }
+
+      &.active {
+        background: #bcbcbc41;
+
+        svg {
+          stroke: black;
+          stroke-width: 1px;
+        }
+
+        p {
+          font-weight: 500;
+        }
+
+        &:hover {
+          background: #bcbcbcac;
+        }
+
+        &:active {
+          background: #bcbcbcda;
+        }
+      }
+    }
+  }
+}
